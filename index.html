@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIDDHANT KAKADE | Portfolio</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --deep-red: #7B0F1A;
+    --rich-crimson: #A4161A;
+    --champagne-gold: #D4AF37;
+    --soft-cream: #F8F1E9;
+    --warm-beige: #EFE6DD;
+    --dark-text: #2B2B2B;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--warm-beige), var(--soft-cream));
+    color: var(--dark-text);
+    scroll-behavior: smooth;
+}
+
+
+header {
+    background: var(--deep-red);
+    padding: 25px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--champagne-gold);
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: var(--soft-cream);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: var(--champagne-gold);
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+section {
+    padding: 80px 10%;
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--deep-red);
+    font-size: 32px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: var(--champagne-gold);
+    display: block;
+    margin-top: 8px;
+}
+
+
+#about {
+    background: var(--soft-cream);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+
+.skills-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: var(--deep-red);
+    color: var(--soft-cream);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: var(--champagne-gold);
+    color: var(--deep-red);
+}
+
+
+.projects-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: white;
+    padding: 30px;
+    flex: 1 1 320px;
+    border-radius: 15px;
+    border-top: 5px solid var(--deep-red);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-top: 5px solid var(--champagne-gold);
+}
+
+
+form {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid var(--deep-red);
+}
+
+
+button {
+    background: var(--deep-red);
+    color: var(--soft-cream);
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--champagne-gold);
+    color: var(--deep-red);
+}
+
+/* Feedback Display */
+.feedback-item {
+    background: white;
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 5px solid var(--deep-red);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--deep-red);
+    color: var(--soft-cream);
+    margin-top: 60px;
+}
+
+.success-message {
+    color: var(--deep-red);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>SIDDHANT KAKADE</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am Siddhant Kakade, a passionate Frontend Developer who specializes in creating 
+        elegant, premium, and interactive web experiences. I enjoy combining design 
+        aesthetics with functional code to deliver high-quality digital products.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">UI/UX Design</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>Medicine remainder application</h3>
+            <p>
+                Medicine Reminder Application  helps users take medicines on time by sending alerts and notifications. It allows users to set dosage schedules and track their medication easily.
+
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Hostel management System</h3>
+            <p>
+                A Hostel Management System is a software application that helps manage hostel operations such as room allocation, student records, fee tracking, and attendance. It simplifies administration and improves overall hostel management efficiency.
+
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact / Feedback</h2>
+    <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" rows="4" placeholder="Your Feedback"></textarea>
+        <button type="submit">Submit</button>
+        <div class="success-message" id="successMessage"></div>
+    </form>
+
+    <div id="feedbackDisplay"></div>
+</section>
+
+
+
+<script>
+
+
+document.addEventListener("DOMContentLoaded", loadFeedback);
+
+function loadFeedback() {
+    const feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+    feedbacks.forEach(displayFeedback);
+}
+
+
+document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const successMessage = document.getElementById("successMessage");
+
+    if (name === "") {
+        alert("Name cannot be empty.");
+        return;
+    }
+
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        alert("Please enter a valid email.");
+        return;
+    }
+
+    const feedback = { name, email, message };
+
+    
+    const feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+    feedbacks.push(feedback);
+    localStorage.setItem("feedbacks", JSON.stringify(feedbacks));
+
+
+    displayFeedback(feedback);
+
+    successMessage.textContent = "Thank you! Your feedback has been submitted successfully.";
+
+    document.getElementById("feedbackForm").reset();
+});
+
+
+function displayFeedback(feedback) {
+    const container = document.getElementById("feedbackDisplay");
+
+    const div = document.createElement("div");
+    div.classList.add("feedback-item");
+
+    div.innerHTML = `
+        <strong>${feedback.name}</strong> (${feedback.email})<br>
+        ${feedback.message}
+    `;
+
+    container.appendChild(div);
+}
+
+</script>
+
+</body>
+</html>
